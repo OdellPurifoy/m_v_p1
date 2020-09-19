@@ -1,35 +1,31 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= post.category %></td>
-        <% if user_signed_in? && current_user.admin == true %>
-          <td><%= link_to 'Show', post %></td>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% else %>
-          <td><%= link_to 'Show', post %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<% @posts.each do |post| %>
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-12">
+      <article class="blog-card">
+        <div class="blog-card__background">
+          <div class="card__background--wrapper">
+            <div class="card__background--main" style="background-image: url('http://demo.yolotheme.com/html/motor/images/demo/demo_131.jpg');">
+              <div class="card__background--layer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card__head">
+          <span class="date__box">
+          <span class="date__day"><%= post.created_at.strftime('%d') %></span>
+          <span class="date__month"><%= post.created_at.strftime('%b') %></span>
+          </span>
+        </div>
+        <div class="blog-card__info">
+          <h5><%= post.title %></h5>
+          <p>
+            <a href="#" class="icon-link mr-3"><%= fa_icon('edit', type: :fas) %> Tony Jahson</a>
+          </p>
+          <p><%= post.content %></p>
+          <a href="post_path" class="btn btn--with-icon"><i class="btn-icon fa fa-long-arrow-right"></i>Read Story</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+<% end %>

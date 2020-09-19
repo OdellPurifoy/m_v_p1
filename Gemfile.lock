@@ -70,7 +70,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
-    bootstrap (5.0.0.alpha1)
+    bootstrap (4.5.2)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -98,6 +98,8 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
+    font_awesome5_rails (1.2.0)
+      railties (>= 4.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.5)
@@ -234,10 +236,11 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.2)
-  bootstrap (~> 5.0.0.alpha1)
+  bootstrap (~> 4.5, >= 4.5.2)
   byebug
   capybara (>= 2.15)
   devise
+  font_awesome5_rails (~> 1.2)
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
