@@ -1,20 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @post.category %>
-</p>
-
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+
+<!-- Page Content -->
+  <div class="container mb-5">
+    <div class="row">
+      <!-- Post Content Column -->
+      <div class="col-lg-12">
+        <!-- Title -->
+        <h1 class="mt-4"><%= @post.title %></h1>
+        <!-- Author -->
+        <p class="lead">
+          by
+          <%= @post.user.full_name_display %>
+        </p>
+        <small>Category: <%= @post.category %></small>
+        <hr>
+        <!-- Date/Time -->
+        <p><%= @post.created_at.strftime('%B %d, %Y') %></p>
+        <hr>
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+        <hr>
+        <!-- Post Content -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+      </div>
+    </div>
+  </div>
