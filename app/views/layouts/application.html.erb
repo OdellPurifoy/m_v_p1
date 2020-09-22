@@ -12,6 +12,7 @@
   <body>
     <!-- Start of navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
       <a class="navbar-brand" href="#">Logo</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav navbar-right">
@@ -20,27 +21,32 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
+    </div>
     </nav>
    <!-- End of navbar -->
 
     <!-- Start of jumbotron -->
     <div class="jumbotron">
-      <h1 class="display-4">MoreAlike</h1>
-        <p class="lead">Highlighting our similarities over differences.</p>
+      <div class="container text-center">
+        <h1 class="display-4 text-center">MoreAlike</h1>
+        <p class="lead text-center">Highlighting our similarities over differences.</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="text-center">It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <button type="button" class="btn-btn-primary text-center">Primary</button>
+      </div>
     </div>
     <!-- End of jumbotron -->
-
-
-<section class="detail-page">
-  <div class="container mt-5">
-
-  </div>
-</section>
 
     <div class="container">
       <%= yield %>
     </div>
+
+    <footer class="page-footer font-small mb-5 mt-5 pt-5">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
   </body>
 </html>

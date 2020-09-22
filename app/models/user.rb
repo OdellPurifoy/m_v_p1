@@ -7,4 +7,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posts, dependent: :destroy
   validates :first_name, :last_name, presence: true
+
+  def full_name_display
+    "#{first_name} #{last_name}"
+  end
 end
