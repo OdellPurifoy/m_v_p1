@@ -47,6 +47,10 @@
 	top:1px;
 }
 
+#commentForm {
+  height: 200px;
+}
+
 .btn.btn-sm {
   background-color: #ff4e00;
   border-radius: 28px;
@@ -126,7 +130,7 @@ $text-color: #ff4e00;
 }
 
 body {
-  background: #eee;
+  background: white;
 }
 
 .date__box {
