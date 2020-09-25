@@ -2,7 +2,7 @@
 
 class Post < ApplicationRecord
   belongs_to :user
-  validates :title, :content, :category, presence: true
+  validates :title, :content, presence: true
 
   CATEGORIES = %w[Race Regligon Politics LGBTQ].freeze
 end

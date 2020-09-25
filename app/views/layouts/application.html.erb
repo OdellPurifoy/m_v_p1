@@ -28,7 +28,7 @@
             <%= link_to 'Create Post', new_post_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <%= link_to 'Profile', edit_user_registration_path, class: 'nav-link' %>
+             <%= link_to 'Profile', edit_user_registration_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
             <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
@@ -60,11 +60,10 @@
     <!-- Start of jumbotron -->
     <div class="jumbotron">
       <div class="container text-center">
-        <h1 class="display-4 text-center">MoreAlike</h1>
+        <h1 class="display-4 text-center mt-4">MoreAlike</h1>
         <p class="lead text-center">Highlighting our similarities over differences.</p>
         <hr class="my-4">
-        <p class="text-center">It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <button type="button" class="btn-btn-primary text-center" id="jumboButton">Submit Your Story Here</button>
+        <button type="button" class="btn text-center mt-4" id="jumboButton">Submit Your Story Here</button>
       </div>
     </div>
     <!-- End of jumbotron -->

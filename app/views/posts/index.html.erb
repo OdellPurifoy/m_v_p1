@@ -19,10 +19,10 @@
         <div class="blog-card__info">
           <h5><%= post.title %></h5>
           <p>
-            <a href="#" class="icon-link mr-3"><%= fa_icon('edit', type: :fas) %> John Doe</a>
+            <p><%= fa_icon('edit', type: :fas) %> <%= post.user.full_name_display %></p>
           </p>
-          <p><%= post.content %></p>
-          <a href='post' class="btn btn--with-icon"><i class="btn-icon fa fa-long-arrow-right"></i>Read Story</a>
+          <p><%= post.content.truncate(350) %></p>
+          <%= link_to 'Read Story', post, class: "btn btn-sm" %>
         </div>
       </article>
     </div>
