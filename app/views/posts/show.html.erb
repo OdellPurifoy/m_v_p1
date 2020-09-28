@@ -18,7 +18,11 @@
           <p><%= @post.created_at.strftime('%B %d, %Y') %></p>
           <hr>
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+          <% if @post.main_image.present? %>
+            <%= image_tag @post.main_image.variant(resize_to_limit: [900, 300]), class: 'img-fluid rounded' %>
+          <% else %>
+            <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+          <% end %>
           <hr>
           <!-- Post Content -->
           <p><%= @post.content %></p>
