@@ -5,10 +5,8 @@
   <%= simple_format comment.body %>
 
   <div data-controller='reply'>
-    <%= nesting %>
-    <%= max_nesting %>
-    <%= link_to 'Reply', '#', data: { action: 'click->reply#toggle' }, class: 'btn btn-sm' %>
-    <%= link_to 'Delete', [comment.commentable, comment], method: :delete,  data: { confirm: 'Are your sure?' }, class: 'btn btn-sm' if comment.user == current_user.id || current_user.admin == true %>
+    <%= fa_icon('reply', type: :fas) %> <%= link_to 'Reply', '#', data: { action: 'click->reply#toggle' } %>
+    <%= fa_icon('trash', type: :fas) %> <%= link_to 'Delete', [comment.commentable, comment], method: :delete,  data: { confirm: 'Are your sure?' } if comment.user == current_user.id || current_user.admin == true %>
 
     <%= render partial: 'comments/form', locals: {
       commentable: comment.commentable,
