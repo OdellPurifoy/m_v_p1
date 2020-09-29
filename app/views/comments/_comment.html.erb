@@ -6,7 +6,7 @@
 
   <div data-controller='reply'>
     <%= fa_icon('reply', type: :fas) %> <%= link_to 'Reply', '#', data: { action: 'click->reply#toggle' } %>
-    <%= fa_icon('trash', type: :fas) %> <%= link_to 'Delete', [comment.commentable, comment], method: :delete,  data: { confirm: 'Are your sure?' } if comment.user == current_user.id || current_user.admin == true %>
+    <%= fa_icon('trash', type: :fas, class: 'ml-1') %> <%= link_to 'Delete', [comment.commentable, comment], method: :delete,  data: { confirm: 'Are your sure?' } if comment.user == current_user.id || current_user.admin == true%>
 
     <%= render partial: 'comments/form', locals: {
       commentable: comment.commentable,
@@ -16,6 +16,7 @@
     } %>
   </div>
 
-  <%= render comment.comments, nesting: nesting + 1, max_nesting: local_assigns[:max_nesting] %>
-
+  <%= tag.div id: "#{dom_id(comment)}_comments" do %>
+    <%= render comment.comments, nesting: nesting + 1, max_nesting: local_assigns[:max_nesting] %>
+  <% end %>
 </div>

@@ -4,11 +4,19 @@
     <div class="col-12">
       <article class="blog-card">
         <div class="blog-card__background">
-          <div class="card__background--wrapper">
-            <div class="card__background--main"><%= image_tag post.main_image %>
-              <div class="card__background--layer"></div>
+          <% if post.main_image.present? %>
+            <div class="card__background--wrapper">
+              <div class="card__background--main"><%= image_tag post.main_image %>
+                <div class="card__background--layer"></div>
+              </div>
             </div>
-          </div>
+          <% else %>
+            <div class="card__background--wrapper">
+              <div class="card__background--main" style="background-image: url('http://demo.yolotheme.com/html/motor/images/demo/demo_131.jpg');">
+                <div class="card__background--layer"></div>
+              </div>
+            </div>
+          <% end %>
         </div>
         <div class="blog-card__head">
           <span class="date__box">
