@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   has_one_attached :main_image
   validates :title, :content, presence: true
 
-  # validates :acceptable_image
+  # validate :acceptable_image
   #
   # def acceptable_image
   #   return unless main_image.attached?
