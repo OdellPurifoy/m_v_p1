@@ -4,7 +4,8 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :comments, as: :commentable
   has_one_attached :main_image
-  validates :title, :content, presence: true
+  has_rich_text :content
+  validates :title, :content, :category, presence: true
 
   # validate :acceptable_image
   #

@@ -20,3 +20,6 @@ require("channels")
 //= require bootstrap-sprockets
 
 import "controllers"
+
+require("trix")
+require("@rails/actiontext")

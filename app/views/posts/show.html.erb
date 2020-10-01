@@ -26,7 +26,9 @@
           <hr>
           <!-- Post Content -->
           <p><%= @post.content %></p>
-          <% if current_user.admin == true %>
+          <% if current_user.nil? %>
+            <%= fa_icon('hand-point-left', type: :fas) %> <%= link_to 'Back', posts_path %>
+          <% elsif current_user.admin == true %>
             <%= fa_icon('edit', type: :fas) %> <%= link_to 'Edit', edit_post_path %> |
             <%= fa_icon('hand-point-left', type: :fas) %> <%= link_to 'Back', posts_path %>
           <% else %>

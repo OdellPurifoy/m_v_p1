@@ -1,29 +1,25 @@
 <div class="section">
-<%= simple_form_for @post do |f| %>
-  <div class="field">
-    <div class="control">
-      <%= f.input :title, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
-    </div>
+<%= form_with(model: post, local: true) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <div class="control">
-      <%= f.input :content, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' }  %>
-    </div>
+
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.rich_text_area :content, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <div class="control">
-      <%= f.file_field :main_image, wrapper: false, label_html: { class: 'label' }  %>
-    </div>
+  <div class="form-group">
+    <%= f.label :category %>
+    <%= f.collection_select :post,  %>
   </div>
 
-  <div class="field">
-    <div class="control">
-      <%= f.hidden_field :user_id, value: current_user.id %>
-    </div>
+  <div class="form-group">
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
 
-  <%= f.button :submit, 'Create Post', class: "btn btn-sm mt-3" %>
+  <%= f.button :submit, class: "btn btn-sm mt-3" %>
 <% end %>
 </div>
