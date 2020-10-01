@@ -29,8 +29,11 @@
           <p>
             <p><%= fa_icon('edit', type: :fas) %> <%= post.user.full_name_display %></p>
           </p>
-          <p><%= post.content.truncate(350) %></p>
-          <%= link_to 'Read Story', post, class: "btn btn-sm" %>
+          <p><%= truncate(strip_tags(post.rich_text_content.to_s), length: 350) %></p>
+            <%= link_to 'Read Story', post, class: "btn btn-sm" %>
+          <div class="mt-3">
+            <%= post.comments.count %> <%= post.comments.count > 1 ? 'Comments' : 'Comment' %> <%= fa_icon('comment', type: :fas, class: 'ml-1') %>
+          </div>
         </div>
       </article>
     </div>
