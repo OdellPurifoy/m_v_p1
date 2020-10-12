@@ -6,7 +6,8 @@
     <%= fa_icon('pen', type: :fas) %>
     <%= @post.user.full_name_display %>
   </p>
-    <small>Category: <%= @post.category %></small>
+    <small><strong>Category:</strong> <%= @post.category %></small> <br/>
+    <small><strong>Credit/Source:</strong> <%= @post.source %></small>
   <hr>
 
 <!-- Date/Time -->
