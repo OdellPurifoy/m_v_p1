@@ -59,6 +59,7 @@ h1 {
 .nav-brand {
   color: red !important;
 }
+
 .nav-brand:hover{
   background-color: white !important;
   color: #D3D3D3 !important;
@@ -81,10 +82,9 @@ a:hover {
 	cursor:pointer;
 	font-size:17px;
 	padding:20px 71px;
-  -webkit-box-shadow: 0px 0px 34px 0px rgba(205,205,205,1);
-  -moz-box-shadow: 0px 0px 34px 0px rgba(205,205,205,1);
-  box-shadow: 0px 0px 34px 0px rgba(205,205,205,1);
-}
+  -webkit-box-shadow: 0px 17px 24px -12px rgba(211,211,211,1);
+  -moz-box-shadow: 0px 17px 24px -12px rgba(211,211,211,1);
+  box-shadow: 0px 17px 24px -12px rgba(211,211,211,1);}
 
 .jumbotron {
   background-color: white;
@@ -150,9 +150,13 @@ a:hover {
 .blog-card {
   padding: 30px;
   position: relative;
-  -webkit-box-shadow: 0px 0px 34px 0px rgba(205,205,205,1);
-  -moz-box-shadow: 0px 0px 34px 0px rgba(205,205,205,1);
-  box-shadow: 0px 0px 34px 0px rgba(205,205,205,1);
+  -webkit-box-shadow: 0px 17px 24px -12px rgba(211,211,211,1);
+  -moz-box-shadow: 0px 17px 24px -12px rgba(211,211,211,1);
+  box-shadow: 0px 17px 24px -12px rgba(211,211,211,1);
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0.5px solid #D3D3D3;
   .date__box {
     opacity: 0;
     transform: scale(0.5);

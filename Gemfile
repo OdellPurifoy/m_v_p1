@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+gem 'dotenv-rails', groups: %i[development test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use sqlite3 as the database for Active Record
@@ -60,5 +61,6 @@ gem 'devise'
 gem 'font_awesome5_rails', '~> 1.2'
 gem 'image_processing', '~> 1.12'
 gem 'jquery-rails'
+gem 'shareable'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

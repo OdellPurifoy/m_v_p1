@@ -10,6 +10,10 @@
     <small><strong>Credit/Source:</strong> <%= @post.source %></small>
   <hr>
 
+<!-- Social Media Sharing -->
+  <%= twitter_button %>
+  <%= facebook_button %>
+
 <!-- Date/Time -->
   <p><%= @post.created_at.strftime('%B %d, %Y') %></p>
   <hr>
