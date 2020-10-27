@@ -3,11 +3,12 @@
 
 <!-- Author -->
   <p class="lead">
-    <%= fa_icon('pen', type: :fas) %>
+    <%= fa_icon('user-alt', type: :fas) %>
     <%= @post.user.full_name_display %>
   </p>
     <small><strong>Category:</strong> <%= @post.category %></small> <br/>
-    <small><strong>Credit/Source:</strong> <%= @post.source %></small>
+    <small><strong>Credit/Source:</strong> <%= @post.source %></small> <br/>
+    <small><strong>Posted:</strong> <%= @post.created_at.strftime('%B %d, %Y') %></small>
   <hr>
 
 <!-- Social Media Sharing -->
@@ -15,7 +16,6 @@
   <%= facebook_button %>
 
 <!-- Date/Time -->
-  <p><%= @post.created_at.strftime('%B %d, %Y') %></p>
   <hr>
 
 <!-- Preview Image -->

@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
-  <%= link_to 'MoreAlike', root_path, class: "navbar-brand" %>
+  <%= link_to root_path, class: 'navbar-brand' do %>
+    <%= image_tag('logo-1.svg', "data-svg-fallback" => image_path('logo-1.svg'), :align=> "left", :style => "padding-right: 5px;", class: 'logo') %>
+  <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>

@@ -28,7 +28,7 @@
           <div class="blog-card__info">
             <h5><%= post.title %></h5>
             <p>
-              <p><%= fa_icon('edit', type: :fas) %> <%= post.user.full_name_display %></p>
+              <p><%= fa_icon('user-alt', type: :fas) %> <%= post.user.full_name_display %></p>
             </p>
             <p><%= truncate(strip_tags(post.rich_text_content.to_s), length: 350) %></p>
               <%= link_to 'Read Story', post, class: "btn btn-sm" %>
