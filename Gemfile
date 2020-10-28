@@ -9,7 +9,9 @@ gem 'dotenv-rails', groups: %i[development test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem 'sqlite3', '~> 1.4', group: :development
+# postgresql
+gem 'pg', '~> 1.2', '>= 1.2.3', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -61,6 +63,7 @@ gem 'devise'
 gem 'font_awesome5_rails', '~> 1.2'
 gem 'image_processing', '~> 1.12'
 gem 'jquery-rails'
+gem 'rails_12factor', '~> 0.0.3'
 gem 'shareable'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
