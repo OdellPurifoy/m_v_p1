@@ -122,6 +122,4 @@ test:
 #
 production:
   <<: *default
-  database: more_alike_development
-  username: odellpurifoy
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
