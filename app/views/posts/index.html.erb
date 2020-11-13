@@ -6,7 +6,7 @@
           <div class="blog-card__background">
             <% if post.main_image.present? %>
               <div class="card__background--wrapper">
-                <div class="card__background--main"><%= asset_path post.main_image %>
+                <div class="card__background--main"><%= image_tag post.main_image %>
                   <div class="card__background--layer"></div>
                 </div>
               </div>
